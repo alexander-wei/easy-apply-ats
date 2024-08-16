@@ -1,0 +1,23 @@
+# docker-compose.yml
+version: '2'
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql
+    network_mode: "host"
+    environment:
+     - MYSQL_ROOT_PASSWORD=1234
+     - TZ=America/New_York
+    # ports:
+    # - "5306:3306"
+    #expose:
+    # - "3306"
+  grafana:
+    container_name: ats_grafana
+    #image: grafana/grafana
+    build:
+      context: ./grafana      
+    network_mode: "host"
+    # ports:
+    #  - "3000:3000"

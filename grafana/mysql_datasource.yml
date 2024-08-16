@@ -1,0 +1,24 @@
+apiVersion: 1
+
+datasources:
+  - name: mysql
+    uid: cdu80x0esfcaoe
+    type: mysql
+    typeLogoUrl: public/app/plugins/datasource/mysql/img/mysql_logo.svg
+    url: localhost:3306
+    user: root
+    database: jobapps
+    basicAuth: false
+    basicAuthUser: ''
+    withCredentials: false
+    isDefault: true
+    secureJsonData:
+      user: "root"
+      password: "1234"
+    jsonData:
+      connMaxLifetime: 14400
+      database: jobapps
+      maxIdleConns: 100
+      maxIdleConnsAuto: true
+      maxOpenConns: 100
+      timezone: America/New_York
