@@ -5,7 +5,7 @@ Created on Aug 6, 2024
 """
 
 from sqlalchemy import MetaData, Table, Column, Integer, String, Text, DateTime
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import DeclarativeMeta
 from sqlalchemy.sql import func
 
 
@@ -66,7 +66,7 @@ applications_table = Table(
 )
 
 
-class Base(DeclarativeBase):
+class Base(DeclarativeMeta):
     pass
 
 
