@@ -496,8 +496,7 @@ class Linkedin:
         global countApplied
 
         comPercentage_list = self.driver.find_elements(
-            By.XPATH,
-            "html/body/div[3]/div/div/div[2]/div/div/span",
+            By.XPATH, "//span[contains(@class, 'pl3 t-14 t-black--light')]"
         )
         percenNumber = 111
         if len(comPercentage_list) > 0:
@@ -511,8 +510,7 @@ class Linkedin:
         while percenNumber < 100 and try_limit > 0:
             try_limit -= 1
             comPercentage = self.driver.find_element(
-                By.XPATH,
-                "html/body/div[3]/div/div/div[2]/div/div/span",
+                By.XPATH, "//span[contains(@class, 'pl3 t-14 t-black--light')]"
             ).text
             percenNumber = int(comPercentage[0 : comPercentage.index("%")])
             buttons = [
